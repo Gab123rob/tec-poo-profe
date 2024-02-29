@@ -1,6 +1,6 @@
 package tec.poo.command;
 
-import tec.poo.command.my.*;
+import tec.poo.command.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +12,8 @@ public class CommandManager {
 
     private InfoCommand infoCommand;
 
+    ForEachCommand foreachcommand;
+
     public CommandManager(String[] args) {
 
         if (args == null) {
@@ -21,8 +23,12 @@ public class CommandManager {
         // Inicializando las variables de instancia
         this.availableCommands = new HashMap<>();
         this.infoCommand = new InfoCommand(args);
+        this.foreachcommand = new ForEachCommand(args);
 
         this.addCommand("info", infoCommand);
+        this.addCommand("foreach", foreachcommand);
+
+        this.foreachcommand = new ForEachCommand(args);
     }
 
     public void addCommand(String commandOption, Object command) {
@@ -64,10 +70,15 @@ public class CommandManager {
 
         if (commandOption.equals("info")) {
             this.infoCommand.execute();
-        } else {
+
+        } else if(commandOption.equals("foreach")){
+            this.foreachcommand.execute();
+        }else {
             printAvailableCommands();
         }
-    }
+            }
+        
+    
 
     public Map<String, Object> getAvailableCommands() {
         return this.availableCommands;
