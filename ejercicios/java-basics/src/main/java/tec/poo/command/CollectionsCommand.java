@@ -45,6 +45,6 @@ public class CollectionsCommand {
 
     @Override
     public String toString() {
-        return "Collections Example-David Solano";
+        return "Collections Example";
     }
 }

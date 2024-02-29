@@ -19,6 +19,7 @@ public class CommandManager {
 
     CollectionsCommand collectionsCommand;
 
+    ForEachCommand foreachcommand;
 
     public CommandManager(String[] args) {
 
@@ -32,12 +33,17 @@ public class CommandManager {
         this.switchCaseCommand = new SwitchCaseCommand(args);
         this.scannerCommand = new ScannerCommand(args);
         this.collectionsCommand = new CollectionsCommand(args);
+        this.foreachcommand = new ForEachCommand(args);
 
         this.addCommand("info", infoCommand);
         this.addCommand("scanner", scannerCommand);
         this.addCommand("coll", collectionsCommand);
+<<<<<<< HEAD
+        this.addCommand("foreach", foreachcommand);
+=======
         this.addCommand("switch",switchCaseCommand);
 
+>>>>>>> upstream/main
     }
 
     public void addCommand(String commandOption, Object command) {
@@ -79,16 +85,28 @@ public class CommandManager {
         }
         if (commandOption.equals("info")) {
             this.infoCommand.execute();
+<<<<<<< HEAD
+
+
+        } else if(commandOption.equals("foreach")){
+            this.foreachcommand.execute();
+        
+
+=======
         } else if (commandOption.equals("switch")) {
             this.switchCaseCommand.execute();
+>>>>>>> upstream/main
         } else if(commandOption.equals("scanner")){
             this.scannerCommand.execute();
         } else if(commandOption.equals("coll")){
             this.collectionsCommand.execute();
         } else {
+
             printAvailableCommands();
         }
-    }
+            }
+        
+    
 
     public Map<String, Object> getAvailableCommands() {
         return this.availableCommands;
