@@ -28,10 +28,12 @@ public class CommandManager {
         this.infoCommand = new InfoCommand(args);
         this.scannerCommand = new ScannerCommand(args);
         this.collectionsCommand = new CollectionsCommand(args);
+        this.foreachcommand = new ForEachCommand(args);
 
         this.addCommand("info", infoCommand);
         this.addCommand("scanner", scannerCommand);
         this.addCommand("coll", collectionsCommand);
+        this.addCommand("foreach", foreachcommand);
     }
 
     public void addCommand(String commandOption, Object command) {
@@ -72,18 +74,18 @@ public class CommandManager {
         }
         if (commandOption.equals("info")) {
             this.infoCommand.execute();
-<<<<<<< HEAD
+
 
         } else if(commandOption.equals("foreach")){
             this.foreachcommand.execute();
-        }else {
+        
 
         } else if(commandOption.equals("scanner")){
             this.scannerCommand.execute();
         } else if(commandOption.equals("coll")){
             this.collectionsCommand.execute();
         } else {
->>>>>>> upstream/main
+
             printAvailableCommands();
         }
             }

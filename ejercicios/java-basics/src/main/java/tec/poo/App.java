@@ -3,11 +3,10 @@ package tec.poo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import tec.poo.command.CommandManager;
-<<<<<<< HEAD
+
 import tec.poo.command.InfoCommand;
 
-=======
->>>>>>> upstream/main
+
 
 import java.util.Optional;
 
