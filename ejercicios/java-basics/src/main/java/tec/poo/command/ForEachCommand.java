@@ -49,6 +49,6 @@ public class ForEachCommand {
 
     @Override
     public String toString() {
-        return "ForEach Example Aaron Moncada";
+        return "ForEach Example-Aaron Moncada";
     }
 }
