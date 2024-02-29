@@ -19,10 +19,7 @@ public class CommandManager {
 
     CollectionsCommand collectionsCommand;
 
-<<<<<<< HEAD
     ForEachCommand foreachcommand;
-=======
->>>>>>> upstream/main
 
     public CommandManager(String[] args) {
 
