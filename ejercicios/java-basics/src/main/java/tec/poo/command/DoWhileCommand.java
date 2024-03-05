@@ -21,6 +21,6 @@ public class DoWhileCommand {
 
     @Override
     public String toString() {
-        return "Do-While Example - Samuel Garces?";
+        return "Do-While Example - David Salazar? / Samuel Garces";
     }
 }
