@@ -21,6 +21,8 @@ public class CommandManager {
 
     ForEachCommand foreachcommand;
 
+    DoWhileCommand doWhileCommand;
+
     public CommandManager(String[] args) {
 
         if (args == null) {
@@ -34,16 +36,15 @@ public class CommandManager {
         this.scannerCommand = new ScannerCommand(args);
         this.collectionsCommand = new CollectionsCommand(args);
         this.foreachcommand = new ForEachCommand(args);
+        this.doWhileCommand = new DoWhileCommand(args);
 
         this.addCommand("info", infoCommand);
         this.addCommand("scanner", scannerCommand);
         this.addCommand("coll", collectionsCommand);
-<<<<<<< HEAD
         this.addCommand("foreach", foreachcommand);
-=======
         this.addCommand("switch",switchCaseCommand);
+        this.addCommand("dowhile", doWhileCommand);
 
->>>>>>> upstream/main
     }
 
     public void addCommand(String commandOption, Object command) {
@@ -85,22 +86,27 @@ public class CommandManager {
         }
         if (commandOption.equals("info")) {
             this.infoCommand.execute();
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 
         } else if(commandOption.equals("foreach")){
             this.foreachcommand.execute();
         
 
-=======
+//=======
         } else if (commandOption.equals("switch")) {
             this.switchCaseCommand.execute();
->>>>>>> upstream/main
+//>>>>>>> upstream/main
         } else if(commandOption.equals("scanner")){
             this.scannerCommand.execute();
         } else if(commandOption.equals("coll")){
             this.collectionsCommand.execute();
-        } else {
+        } 
+        else if(commandOption.equals("dowhile")){
+            this.doWhileCommand.execute();
+        } 
+        
+        else {
 
             printAvailableCommands();
         }
