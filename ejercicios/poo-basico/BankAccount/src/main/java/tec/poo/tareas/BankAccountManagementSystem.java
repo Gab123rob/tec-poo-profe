@@ -1,6 +1,6 @@
 package tec.poo.tareas;
 
-class Pruebas{
+class BankAccountManagementSystem{
 public static void main(String[] args) {
     System.out.print("Creacion de los objetos: ");
     ImmutableBankAccount immutable = new ImmutableBankAccount("C111111111", 10000.2);
